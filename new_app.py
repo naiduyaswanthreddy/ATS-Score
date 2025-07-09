@@ -33,4 +33,6 @@ async def ats_score(cv: UploadFile = File(...), jd: UploadFile = File(...)):
         return {"ats_score": score}
 
     except Exception as e:
+        print(f"❌ Error in /ats-score/: {str(e)}") 
         return JSONResponse(status_code=500, content={"error": str(e)})
+
