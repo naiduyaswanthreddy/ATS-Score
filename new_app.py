@@ -8,6 +8,13 @@ import shutil
 
 app = FastAPI()
 
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the ATS Score API. Use /ats-score/ endpoint to get started."}
+
+
 @app.post("/ats-score/")
 async def ats_score(cv: UploadFile = File(...), jd: UploadFile = File(...)):
     try:
