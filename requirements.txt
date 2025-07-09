@@ -6,3 +6,4 @@ numpy
 torch
 scikit-learn
 nltk
+python-multipart
